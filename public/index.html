@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+        <script src = "https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+        <script>src = "js/create-star.js"</script>
+        <script>src = "js/delete-star.js"</script>
         <title>multi-platform interaction</title>
     </head>
     <body>
         <a-scene>
+            <!-- <a-assets>
+
+            </a-assets> -->
+            
+<!-- - - - FLOOR AND CEILING - - - -->
             <a-entity   id = "plane"
                         geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#fcba03"
+                        material="color:#a249eb"
                         rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "plane"
+                        geometry="primitive:plane; width:2.5; height:1.5;"
+                        material="color:#a249eb"
+                        rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "plane"
+                        geometry="primitive:plane; width:2.5; height:1.5;"
+                        material="color:#a249eb"
+                        rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "plane"
+                        geometry="primitive:plane; width:2.5; height:1.5;"
+                        material="color:#a249eb"
+                        rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "plane"
+                        geometry="primitive:plane; width:2.5; height:1.5;"
+                        material="color:#a249eb"
+                        rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "plane"
+                        geometry="primitive:plane; width:2.5; height:1.5;"
+                        material="color:#a249eb"
+                        rotation="-90 0 0"></a-entity>
+
+            <a-entity   id = "button"
+                        class="clickable"
+                        geometry="primitive:cylinder; height:0.1; radius:0.3;"
+                        material="color:#bf75ff"
+                        create-star=""></a-entity>
                         
         </a-scene>
     </body>
