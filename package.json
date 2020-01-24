@@ -1,0 +1,23 @@
+{
+  "name": "multi-platform-interaction",
+  "version": "1.0.0",
+  "description": "Uses WedVR to design a multi-platform interaction across desktop and mobile.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliannaclarke/multi-platform-interaction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliannaclarke/multi-platform-interaction/issues"
+  },
+  "homepage": "https://github.com/juliannaclarke/multi-platform-interaction#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
