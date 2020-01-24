@@ -2,52 +2,77 @@
 <html>
     <head>
         <script src = "https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-        <script>src = "js/create-star.js"</script>
-        <script>src = "js/delete-star.js"</script>
+        <script src = "js/create-star.js"></script>
+        <script src = "js/star-properties.js"></script>
         <title>multi-platform interaction</title>
     </head>
     <body>
         <a-scene>
-            <!-- <a-assets>
+            <!-- <a-asset-item id="star_model" src="\assets\models\star texture\PBR - Metallic Roughness.gltf"></a-asset-item> -->
 
-            </a-assets> -->
+<!-- - - - CAMERA - - - -->
+            <a-entity camera look-controls wasd-controls position="0 1.2 2">
+                <a-entity   cursor="rayOrigin:mouse;"
+                            raycaster="far:20; interval:100; objects:.clickable;">
+
+                </a-entity>
+            </a-entity>
             
+<!-- - - - LIGHT - - - -->
+            <a-entity></a-entity>
+
 <!-- - - - FLOOR AND CEILING - - - -->
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
+            <a-entity   id = "floor"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:8; height:12;"
+                        material = "color:#a249eb"
+                        rotation = "-90 0 0"
+                        position = "0 0 -2"></a-entity>
 
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
+            <a-entity   id = "ceiling"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:8; height:12;"
+                        material = "color:#a249eb"
+                        rotation = "90 0 0"
+                        position = "0 4 -2"></a-entity>
 
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
 
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
+<!-- - - - WALLS - - - -->
+            <a-entity   id = "north plane"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:8; height:4;"
+                        material = "color:#a249eb"
+                        rotation = "0 0 0"
+                        position = "0 2 -8"></a-entity>
 
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
+            <a-entity   id = "west plane"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:12; height:4;"
+                        material = "color:#a249eb"
+                        rotation = "0 90 0"
+                        position = "-4 2 -2"></a-entity>
 
-            <a-entity   id = "plane"
-                        geometry="primitive:plane; width:2.5; height:1.5;"
-                        material="color:#a249eb"
-                        rotation="-90 0 0"></a-entity>
+            <a-entity   id = "east plane"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:12; height:4;"
+                        material = "color:#a249eb"
+                        rotation = "0 -90 0"
+                        position = "4 2 -2"></a-entity>
 
+            <a-entity   id = "south plane"
+                        class = "boundary"
+                        geometry = "primitive:plane; width:8; height:4;"
+                        material = "color:#a249eb"
+                        rotation = "0 180 0"
+                        position = "0 2 4"></a-entity>
+
+
+<!-- - - - SCENE OBJECTS - - - -->
             <a-entity   id = "button"
-                        class="clickable"
-                        geometry="primitive:cylinder; height:0.1; radius:0.3;"
-                        material="color:#bf75ff"
-                        create-star=""></a-entity>
+                        class = "clickable"
+                        geometry = "primitive:cylinder; height:0.1; radius:0.3;"
+                        material = "color:#ffab19"
+                        create-star = ""></a-entity>
                         
         </a-scene>
     </body>

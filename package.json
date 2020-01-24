@@ -19,5 +19,6 @@
   "homepage": "https://github.com/juliannaclarke/multi-platform-interaction#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
