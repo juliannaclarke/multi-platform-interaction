@@ -26,7 +26,12 @@ AFRAME.registerComponent("star-properties",{
     collectStar : function(){
         const Context_AF = this;
         //get camera position
-        //Context_AF.el.object3D.position.set();//camera position
+        let starAnim = document.createElement('a-entity');
+        starAnim.setAttribute('animation','property','rotation');
+        starAnim.setAttribute('animation','to',{x:0, y:360, z:0});
+        starAnim.setAttribute('animation','loop','true');
+        starAnim.setAttribute('animation','dur', 15000);
+        // Context_AF.el.object3D.position.set();//camera position
         // Context_AF.el.object3D.animation.property.set('rotation');
         // Context_AF.el.object3D.animation.to.set(0, 360, 0);
         // Context_AF.el.object3D.animation.loop.set(true);
