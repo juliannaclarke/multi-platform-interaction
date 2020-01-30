@@ -26,8 +26,10 @@ AFRAME.registerComponent("create-star",{
         const starScale = 0.02;
 
         let starElem = document.createElement('a-entity');
+        starElem.setAttribute('id','star')
         starElem.setAttribute('class','clickable');
-        starElem.setAttribute('glow','enabled:true, color:#ffab19, scale:1.5');
+        starElem.setAttribute('class','hoverable');
+        //starElem.setAttribute('glow','enabled:true, color:#ffab19, scale:1.5');
         starElem.setAttribute('obj-model','obj:/assets/models/star.obj');
         starElem.setAttribute('material', 'src:assets/textures/starUV.png');
         starElem.setAttribute('star-properties','');
@@ -41,6 +43,10 @@ AFRAME.registerComponent("create-star",{
 
         //const randScale = 0.2 + (Math.random() * 0.8);
         //starElem.setAttribute('scale',{x:randScale, y:randScale, z: randScale});
+
+        //add animation property to stars
+        // let anim = document.querySelector('#starAnim');
+        // starElem.appendChild(anim);
 
 
         //add to scene
