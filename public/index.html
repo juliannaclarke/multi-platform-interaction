@@ -14,22 +14,25 @@
             <!-- <a-asset-item id="star_model" src="\assets\models\star texture\PBR - Metallic Roughness.gltf"></a-asset-item> -->
 
 <!-- - - - CAMERA - - - -->
-            <a-entity id = "camera" camera look-controls wasd-controls position="0 1.3 2">
+            <a-entity id = "camera" camera look-controls wasd-controls position="0 1.3 2" camera-reader="">
                 <a-entity   cursor="rayOrigin:mouse;"
                             raycaster="far:20; interval:100; objects:.clickable, .hoverable;">
-                            <a-entity   id = "pinned"
+                            
+                </a-entity>
+                <!-- object pinned to camera-->
+                <!-- <a-entity   id = "pinned"
                             class = "hoverable"
                             geometry = "primitive:box; width: 0.3; height:0.3; depth:0.3;"
                             position = "0 -1 -1;"
                             rotation = "0 30 0"
                             material = "color:#e32636;">
-                </a-entity>
 
-                </a-entity>
+                </a-entity> -->
             </a-entity>
             
-<!-- - - - LIGHT - - - -->
-            <a-entity></a-entity>
+<!-- - - - LIGHTS - - - -->
+            <a-entity id = 'top' light="type: point; color: #ff80ff; intensity:0.5; rotation: -20, 50, -10;" position = "0 0.5 0"></a-entity>
+            <a-entity light="type: point; color: #ff80ff; intensity:0.5; rotation: 180, 50, -10;" position = "0 2 0"></a-entity>
 
 <!-- - - - FLOOR AND CEILING - - - -->
             <a-entity   id = "floor"

@@ -29,24 +29,16 @@ AFRAME.registerComponent("create-star",{
         starElem.setAttribute('id','star')
         starElem.setAttribute('class','clickable');
         starElem.setAttribute('class','hoverable');
-        //starElem.setAttribute('glow','enabled:true, color:#ffab19, scale:1.5');
+        //starElem.setAttribute('glow',{enabled:true, color:'#ffab19', scale:1.5});
         starElem.setAttribute('obj-model','obj:/assets/models/star.obj');
-        starElem.setAttribute('material', 'src:assets/textures/starUV.png');
+        starElem.setAttribute('material', {src:'assets/textures/starUV.png', shader: 'flat'});
         starElem.setAttribute('star-properties','');
 
         starElem.setAttribute('position',{x:((Math.random() * 6.0) - 3), y:((Math.random() * 2.5) + 1.0), z:((Math.random() * 6.5) - 7.0)});
         starElem.setAttribute('scale', {x:starScale, y:starScale, z:starScale});
-        //starElem.setAttribute('rotation', {x:starScale, y:starScale, z:starScale});
-        //set the random rotation so it looks nicer
 
-        //starElem.object3D.el.setAttribute('animation','property','rotation','to',{x:0, y:360, z:0}, 'dur', '15000');
-
-        //const randScale = 0.2 + (Math.random() * 0.8);
-        //starElem.setAttribute('scale',{x:randScale, y:randScale, z: randScale});
-
-        //add animation property to stars
-        // let anim = document.querySelector('#starAnim');
-        // starElem.appendChild(anim);
+        starElem.setAttribute('animation', {property: 'rotation', to: {x:0, y:360, z:0}, loop: true, dur:5000, easing: 'linear'});
+        starElem.setAttribute('light', {type: 'point', intensity: 0.05, color:'#ffff80'})
 
 
         //add to scene
