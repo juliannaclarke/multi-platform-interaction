@@ -19,7 +19,8 @@
   "homepage": "https://github.com/juliannaclarke/multi-platform-interaction#readme",
   "dependencies": {
     "aframe-glow": "^1.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-forge": "^0.9.1"
   },
   "devDependencies": {}
 }

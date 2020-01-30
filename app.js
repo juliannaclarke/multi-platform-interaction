@@ -12,5 +12,5 @@ app.get("/",function(req, res){
     res.sendFile(__dirname +"public/index.html");
 });
 
-server.listen(LISTEN_PORT);
+server.listen(LISTEN_PORT,'0.0.0.0');
 console.log("Listening on port: " + LISTEN_PORT);
