@@ -10,6 +10,11 @@
     </head>
     <body>
         <a-scene>
+            <a-assets>
+                <a-sound id="boop" src="assets/sounds/Blop.mp3" preload="auto"></a-sound>
+                <a-sound id="swoosh" src="assets/sounds/Swooshing.mp3" preload="auto"></a-sound>
+                <a-sound id="chime" src="assets/sounds/chime.mp3" preload="auto"></a-sound>
+            </a-assets>
 
 <!-- - - - CAMERA - - - -->
             <a-entity id = "camera" camera look-controls wasd-controls position="0 1.3 2" camera-reader="">
@@ -76,6 +81,7 @@
                         geometry = "primitive:cylinder; height:0.1; radius:0.3;"
                         position = "-1 0 0"
                         material = "color:#ffab19"
+                        sound = "src: #boop; on: click;"
                         create-star = ""></a-entity>
 
             <a-entity   id = "releaseButton"
@@ -83,7 +89,10 @@
                         geometry = "primitive:cylinder; height:0.1; radius:0.3;"
                         position = "1 0 0"
                         material = "color:#ffab19"
+                        sound = "src: #swoosh; on: click;"
                         release-star = ""></a-entity>
+
+            <a-sound src="assets/sounds/Blear_Moon_03_Ongoing_cases.mp3" autoplay="true" position="0 2 0" volume = "2" loop = "true"></a-sound>
 
         </a-scene>
     </body>

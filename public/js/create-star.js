@@ -40,7 +40,8 @@ AFRAME.registerComponent("create-star",{
 
         //nice touches; adding an small rotation and a glow effect for intrigue
         starElem.setAttribute('animation', {property: 'rotation', to: {x:0, y:360, z:0}, loop: true, dur:5000, easing: 'linear'});
-        starElem.setAttribute('light', {type: 'point', intensity: 0.05, color:'#ffff80'})
+        starElem.setAttribute('light', {type: 'point', intensity: 0.05, color:'#ffff80'});
+        starElem.setAttribute('sound',{src: '#chime', on: 'click'});
 
 
         //add to scene
