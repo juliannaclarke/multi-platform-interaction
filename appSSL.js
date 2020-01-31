@@ -64,4 +64,5 @@ const secureServer = https.createServer(options, app);
 
 /************* RUN HTTPS SERVER ***************/
 secureServer.listen(LISTEN_PORT,'0.0.0.0');     //start server
+//secureServer.listen(LISTEN_PORT, process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '192.168.0.47');     //start server
 console.log('Listening on port: ' + LISTEN_PORT );
